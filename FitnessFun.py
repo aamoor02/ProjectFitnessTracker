@@ -1,0 +1,6 @@
+first_name = input('what is your first name?\n').upper()
+last_name = input('what is your last name?\n').upper()
+birthday = check_birthday()
+height = input('what is your height in inches?\n')
+weight = input('what is your weight in pounds?\n')
+email = check_email()
