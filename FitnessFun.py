@@ -171,3 +171,37 @@ def display_abdominal():
 			   4.	Plank \n
 			   5.	Mountain Climber  \n
 ''' )
+
+def get_excercise_info():
+    ''' Gets excercise data from the user'''
+    amount = int(input("what is the amount of weight in pounds? \n"))
+    num_of_reps = int(input("What are the number of reps \n"))
+    number_of_sets = int(input("What are the number of sets? \n"))
+    weight_in_kilograms = convert_to_kilogram(amount)
+    return amount, num_of_reps, number_of_sets, weight_in_kilograms
+
+
+def calculations( weight, repetiton, numerous_sets, kilograms):
+    '''Performs calculations for the user'''
+    print("The amount of weight used for this excercise is {} pounds or {} kilograms".format(weight, kilograms))
+    print("You have completed {} repetitions of this weight".format(repetiton))
+    print("You have completed {} sets of these reps".format(numerous_sets))
+    total_weight_pounds = weight * repetiton * numerous_sets
+    total_weight_kilograms = kilograms * repetiton * numerous_sets
+    print("The total amount of weight lifted for this excercise is {} pounds and {} kilograms".format(total_weight_pounds, total_weight_kilograms))
+
+def get_choice():
+    '''Gets the selection from the user'''
+    print (''' Here is a list of available excercises
+                           1.   Chest \n
+			   2.	Arms  \n
+			   3.	Back \n
+			   4.	Legs \n
+			   5.	Abdominal \n
+''' )
+    choice = int(input("What is your selection? \n"))
+    if choice < 1 or choice > 5:
+        print("Invalid selection. Please try again")
+        get_choice()
+    else:
+        return choice
