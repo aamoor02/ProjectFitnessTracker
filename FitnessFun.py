@@ -121,3 +121,53 @@ def abdominal():
         print("Alright you have selected {}.".format(excercise_list[selection-1]))
         amt, reps, sets, kilo = get_excercise_info()
         calculations(amt, reps, sets, kilo)
+
+def display_chest():
+    ''' Display chest excercises'''
+    print (''' Here is a list of available excercises
+                           1.   cable crossover \n
+			   2.	push_ups  \n
+			   3.	Dips \n
+			   4.	seated deck machine \n
+			   5.	plate press out  \n
+''' )
+
+def display_arms():
+    ''' Display arm excercises'''
+    print (''' Here is a list of available excercises
+                           1.   dumbell preacher curl \n
+			   2.	cable preacher curl  \n
+			   3.	skull crusher \n
+			   4.	cable triceps pushdown \n
+			   5.	barbell_bicep_curl  \n
+''' )
+
+def display_back():
+    ''' Display back excercises'''
+    print (''' Here is a list of available excercises
+                           1.   kettlebell swings \n
+			   2.	inverted row  \n
+			   3.	lat pulldowns \n
+			   4.	Pull Up \n
+			   5.	Barbell Deadlift  \n
+''' )
+
+def display_legs():
+    ''' Display leg excercises'''
+    print (''' Here is a list of available excercises
+                           1.   Front Squat \n
+			   2.	Deadlift  \n
+			   3.	Walking Lunge \n
+			   4.	Leg Press \n
+			   5.	Goblet Squat  \n
+''' )
+
+def display_abdominal():
+    ''' Display abdominal excercises'''
+    print (''' Here is a list of available excercises
+                           1.   Crunch \n
+			   2.	Reverse Crunch  \n
+			   3.	Leg Raise \n
+			   4.	Plank \n
+			   5.	Mountain Climber  \n
+''' )
