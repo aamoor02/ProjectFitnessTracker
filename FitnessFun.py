@@ -49,3 +49,5 @@ def print_info():
     print("your weight in kilograms is {}.".format(convert_to_kilogram(weight)))
     print("Your height in meters is {}".format(convert_to_meters(height)))
     print("Your email address is {}.".format(email))
+
+    print_info()
