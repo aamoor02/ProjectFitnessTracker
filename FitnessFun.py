@@ -51,3 +51,73 @@ def print_info():
     print("Your email address is {}.".format(email))
 
     print_info()
+
+    def chest():
+    ''' Allow the user to perform chest excercises'''
+    print(" Great you have selected chest!")
+    excercise_list = ['cable crossover', 'push_ups', 'dips', 'seated deck machine', 'plate press out' ]
+    display_chest()
+    selection = int(input("What excercise would u like to complete today? \n"))
+    if selection < 1 or selection > 5:
+        print("Invalid selection. Please try again.")
+        chest()
+    else:
+        print("Alright you have selected {}.".format(excercise_list[selection-1]))
+    amt, reps, sets, kilo = get_excercise_info()
+    calculations(amt, reps, sets, kilo)
+    
+def arms():
+    ''' Allow the user to perform arm excercises'''
+    print("You have selected arms")
+    excercise_list = ['Dumbell Preacher Curl', 'Cable Preacher Curl', 'Skull Crusher', 'Cable Triceps Pushdown', 'Barbell Bicep Curl' ]
+    display_arms()
+    selection = int(input("What excercise would u like to complete today? \n"))
+    if selection < 1 or selection > 5:
+        print("Invalid selection. Please try again.")
+        arms()
+    else:
+        print("Alright you have selected {}.".format(excercise_list[selection-1]))
+    amt, reps, sets, kilo = get_excercise_info()
+    calculations(amt, reps, sets, kilo)
+
+def back():
+    ''' Allow the user to perform back excercises'''
+    print("You have selected back")
+    excercise_list = ['Kettlebell Swings', 'Inverted Row', 'Lat Pulldowns', 'Pull Ups', 'Barbell Deadlift' ]
+    display_back()
+    selection = int(input("What excercise would u like to complete today? \n"))
+    if selection < 1 or selection > 5:
+        print("Invalid selection. Please try again.")
+        chest()
+    else:
+        print("Alright you have selected {}.".format(excercise_list[selection-1]))
+    amt, reps, sets, kilo = get_excercise_info()
+    calculations(amt, reps, sets, kilo)
+
+def legs():
+    ''' Allow the user to perform leg excercises'''
+    print("You have selected legs")
+    excercise_list = ['Front Squat', 'Deadlift', 'Walking Lunge', 'Leg Press', 'Goblet Squat' ]
+    display_legs()
+    selection = int(input("What excercise would u like to complete today? \n"))
+    if selection < 1 or selection > 5:
+        print("Invalid selection. Please try again.")
+        chest()
+    else:
+        print("Alright you have selected {}.".format(excercise_list[selection-1]))
+        amt, reps, sets, kilo = get_excercise_info()
+        calculations(amt, reps, sets, kilo)
+
+def abdominal():
+    ''' Allow the user to perform abdominal excercises'''
+    print("you have selected abdominal")
+    excercise_list = ['Crunch', 'Reverse Crunch', 'Leg Raise', 'Plank', 'Mountain Climber' ]
+    display_abdominal()
+    selection = int(input("What excercise would u like to complete today? \n"))
+    if selection < 1 or selection > 5:
+        print("Invalid selection. Please try again.")
+        chest()
+    else:
+        print("Alright you have selected {}.".format(excercise_list[selection-1]))
+        amt, reps, sets, kilo = get_excercise_info()
+        calculations(amt, reps, sets, kilo)
