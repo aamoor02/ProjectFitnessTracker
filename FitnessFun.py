@@ -2,6 +2,7 @@ import datetime
 import re
 
 def check_birthday():
+     '''Validate correct birthday format '''
      dob = input("What is your date of birth? Please enter in MM-DD-YYYY format.\n")
      try:
           birthday = datetime.datetime.strptime(dob, '%m-%d-%Y')
@@ -9,7 +10,7 @@ def check_birthday():
      except ValueError:
           print("You did not type your date of birth in the correct format")
           print("Please try again")
-          check_birthday()
+          return check_birthday()
 
 def check_email():
     ''' Validate correct email formatting '''
@@ -20,16 +21,18 @@ def check_email():
         return list[0]
     else:
         print("Your email address is invalid")
-        check_email()
-
-
-
+        return check_email()
+    
+     
+# Global Variables
 first_name = input('what is your first name?\n').upper()
 last_name = input('what is your last name?\n').upper()
 birthday = check_birthday()
 height = input('what is your height in inches?\n')
 weight = input('what is your weight in pounds?\n')
 email = check_email()
+
+
 
 def convert_to_kilogram(user_weight):
     ''' convert user provided weight into kilograms '''
@@ -44,15 +47,19 @@ def convert_to_meters(user_height):
 
 
 def print_info():
+    '''Display information entered to the user'''
     print("Your name is {} {}".format(first_name, last_name))
     print("Your birthday is {}-{}-{}".format(birthday.month,birthday.day,birthday.year))
     print("your weight in kilograms is {}.".format(convert_to_kilogram(weight)))
     print("Your height in meters is {}".format(convert_to_meters(height)))
     print("Your email address is {}.".format(email))
+    
 
-    print_info()
 
-    def chest():
+
+print_info()
+
+def chest():
     ''' Allow the user to perform chest excercises'''
     print(" Great you have selected chest!")
     excercise_list = ['cable crossover', 'push_ups', 'dips', 'seated deck machine', 'plate press out' ]
@@ -172,6 +179,7 @@ def display_abdominal():
 			   5.	Mountain Climber  \n
 ''' )
 
+
 def get_excercise_info():
     ''' Gets excercise data from the user'''
     amount = int(input("what is the amount of weight in pounds? \n"))
@@ -205,7 +213,7 @@ def get_choice():
         get_choice()
     else:
         return choice
-
+   
 #Get the selection from user
 user_choice = get_choice()
 
@@ -214,3 +222,6 @@ excercise_area = [chest, arms, back, legs, abdominal]
 
 #Performs selected function after the users choice
 excercise_area[user_choice -1]()
+
+
+
