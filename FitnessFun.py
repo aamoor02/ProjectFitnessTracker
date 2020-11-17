@@ -205,3 +205,12 @@ def get_choice():
         get_choice()
     else:
         return choice
+
+#Get the selection from user
+user_choice = get_choice()
+
+#List of excercises
+excercise_area = [chest, arms, back, legs, abdominal]
+
+#Performs selected function after the users choice
+excercise_area[user_choice -1]()
