@@ -210,7 +210,7 @@ def get_choice():
     choice = int(input("What is your selection? \n"))
     if choice < 1 or choice > 5:
         print("Invalid selection. Please try again")
-        get_choice()
+        return get_choice()
     else:
         return choice
    
